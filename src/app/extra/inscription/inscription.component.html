@@ -1,0 +1,119 @@
+ <!-- Loader -->
+ <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Loader -->
+    
+    <div class="back-to-home rounded d-none d-sm-block">
+        <a href="index.html" class="text-white rounded d-inline-block text-center"><i class="mdi mdi-home"></i></a>
+    </div>
+    
+    <!-- Hero Start -->
+    <section class="" style="background: url('assets/images/fond.jpg') center center;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="login_page bg-white shadow rounded p-4">
+                                <div class="text-center">
+                                    <h4 class="mb-4">Signup Extra</h4>  
+                                </div>
+                                <form [formGroup]="extraForm" (ngSubmit)="onSubmit()" >
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group position-relative">                                               
+                                                <label>First name <span class="text-danger">*</span></label>
+                                                <input type="text" formControlName="firstName" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                                                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                                </div>                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group position-relative">                                                
+                                                <label>Last name <span class="text-danger">*</span></label>
+                                                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                                                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                            
+                                        <div class="col-md-12">
+                                                <div class="form-group position-relative">
+                                                        <label>Your Email <span class="text-danger">*</span></label>
+                                                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                                                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                                            <div *ngIf="f.email.errors.required">Email is required</div>
+                                                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                                <div class="form-group position-relative">
+                                                    <label>Phone Number <span class="text-danger">*</span></label>
+                                                    <input type="text" formControlName="tel" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                                                    <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                                                        <div *ngIf="f.phone.errors.required">Phone number is required</div> 
+                                                </div>
+                                            </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group position-relative">
+                                                <label>Password <span class="text-danger">*</span></label>
+                                                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group position-relative">
+                                                <label>Confirm Password <span class="text-danger">*</span></label>
+                                                <input type="password" formControlName="cpassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                                                    <div *ngIf="submitted && f.cpassword.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.cpassword.errors.required">Confirm Password is required</div>
+                                                     
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="custom-control m-0 custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                    <label class="custom-control-label" for="customCheck1">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary w-100">Register</button>
+                                           
+                                        </div>
+                                        <div class="col-lg-12 mt-4 text-center">
+                                            <h6>Or Signup With</h6>
+                                            <ul class="list-unstyled social-icon mb-0 mt-3">
+                                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google"></i></a></li>
+                                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-github-circle" title="Github"></i></a></li>
+                                            </ul><!--end icon-->
+                                        </div>
+                                        <div class="mx-auto">
+                                            <p class="mb-0 mt-3"><small class="text-dark mr-2">Already have an account ?</small> <a href="/extra/login" class="text-dark font-weight-bold">Sign in</a></p>
+                                        </div>
+                                    
+                                </form>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+    </section><!--end section-->
+    <!-- Hero End -->
